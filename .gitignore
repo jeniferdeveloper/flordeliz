@@ -1,0 +1,12 @@
+.idea/*
+/.idea/*
+/.idea/
+.idea/
+.vscode/*
+.vscode/
+/.vscode/
+/.vscode/*
+/vendor
+/node_modules
+Homestead.yaml
+Homestead.json

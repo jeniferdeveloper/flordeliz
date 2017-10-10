@@ -1,0 +1,38 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews
+    </IfModule>
+
+    RewriteEngine On
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+
+
+
+
+    RewriteRule ^ index.php [L]
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+#RewriteEngine on
+
+
+#RewriteCond %{HTTPS} off [OR]
+#RewriteCond %{HTTP_HOST} ^www\.(.+)
+#RewriteRule ^ https://%1%{REQUEST_URI} [NC,L]
+#
+#RewriteEngine on
+#RewriteCond %{SERVER_NAME} ^(?:www\.)?(xy)\.com$
+#RewriteRule ^ https://%1%{REQUEST_URI} [END,QSA,R=permanent]
+
+#<IfModule mod_rewrite.c>
+#RewriteEngine On
+#RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization},L] RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule ^(.*)$ app.php [QSA,L]
+#</IfModule>
+</IfModule>
