@@ -8,6 +8,7 @@
 				<div class="panel-heading">Home</div>
 
 				<div class="panel-body">
+				<!-- teste -->
 				Você está logado!
 				</div>
 			</div>
